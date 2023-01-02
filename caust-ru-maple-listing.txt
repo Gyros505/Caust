@@ -30,7 +30,7 @@ caust:=proc(a)
     p1 := plot([x(t), y(t), t = t1 .. t2], color = navy, legend = "парабола"):
     p2 := plot([xNp(a, s), yNp(a, s), s = 0 .. 2]):
     p3 := plot([x_env(t), y_env(t), t = t1 .. t2], color = coral, legend = "огибающая нормалей к параболе"):
-    plots:-display(p1, p2, p3);
+    display(p1, p2, p3);
 end proc;
 
 animate(caust, [t], t = V, view = [-3 .. 3, 0 .. 4], trace = 49, scaling = constrained, tickmarks = [0, 0], title = "Эволюта параболы");
